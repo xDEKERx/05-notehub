@@ -1,4 +1,3 @@
-
 import css from './Notification.module.css';
 
 const Notification = () => {
