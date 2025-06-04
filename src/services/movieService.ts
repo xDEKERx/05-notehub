@@ -10,16 +10,16 @@ interface MoviesHttpResponse {
     total_pages: number;
 }
 
-export default async function fetchMovies(query:string):Promise<Movie[]> {
+export default async function fetchMovies(query:string, page:number):Promise<MoviesHttpResponse> {
     const response = await axios.get<MoviesHttpResponse>(API_URL, {
         params: {
             query,
-            page: 1,
+            page,
         },
         headers: {
             accept: 'application/json',
             Authorization: `Bearer ${TMDB_KEY}`,
         }
     })
-    return response.data.results;
+    return response.data;
 }
