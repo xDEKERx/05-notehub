@@ -2,7 +2,7 @@ import axios from "axios";
 import { type NewNoteData, type Note } from "../types/note";
 
 const API_KEY = import.meta.env.VITE_NOTEHUB_TOKEN;
-const API_URL = 'https://notehub-public.goit.study/api/notes';
+const API_URL = 'https://notehub-public.goit.study/api/auth';
 
 const HEADERS = {
     Accept: 'application/json',
